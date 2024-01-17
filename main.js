@@ -1,3 +1,4 @@
+// 📍 lenis
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
@@ -11,12 +12,15 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-//----------------------------------
+// 📍 Splitting
 Splitting();
-//---------------------------------
+
+
+// 📍 gsap
 gsap.registerPlugin(ScrollTrigger);
 
-//제목
+
+// 📍 제목
 let tl = gsap.timeline();
 tl.from(".title .char", {
   opacity: 0,
@@ -52,7 +56,7 @@ gsapSq.forEach((gSq,i)=>{
 })
 
 
-//header
+// 📍 header
 function header(){
 gsap.to(".title_paralax",{
     scrollTrigger:{
@@ -113,14 +117,11 @@ gsap.to(".header__marq-star img",{
     rotate:-720
 
 })
-
-
-
 }
-
 header();
 
-//about
+
+// 📍 about
 function about(){
     gsap.from(".about__img",{
         scrollTrigger:{
@@ -129,7 +130,6 @@ function about(){
             scrub:1.9
         },
         yPercent:80
-    
     })
 
     gsap.from(".about__img img",{
@@ -139,7 +139,6 @@ function about(){
             scrub:1.9
         },
         scale:1.6
-    
     })
 
     gsap.to(".about__txt",{
@@ -149,13 +148,12 @@ function about(){
             scrub:1.9
         },
         yPercent:50
-    
     })
 }
-
 about();
 
-//benefits
+
+// 📍 benefits
 
 function benefits(){
     gsap.from(".benefits__num",{
@@ -168,10 +166,10 @@ function benefits(){
     
     })
 }
-benefits()
+benefits();
 
 
-//work
+// 📍 work
 function work(){
     gsap.from(".work__item-num",{
         scrollTrigger:{
@@ -190,14 +188,11 @@ function work(){
         },
         scale:1.6
     })
-
-    
-
 }
-work()
+work();
 
 
-//serv
+// 📍 serv
 function serv(){
     gsap.from(".serv__item-arrow",{
         scrollTrigger:{
@@ -209,10 +204,10 @@ function serv(){
     
     })
 }
-serv()
+serv();
 
 
-//footer
+// 📍 footer
 function footer(){
     gsap.from(".footer__div span",{
         scrollTrigger:{
@@ -225,4 +220,4 @@ function footer(){
     
     })
 }
-footer()
+footer();
